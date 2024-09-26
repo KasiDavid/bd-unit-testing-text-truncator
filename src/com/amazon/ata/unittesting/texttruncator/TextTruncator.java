@@ -62,6 +62,7 @@ public class TextTruncator {
         // otherwise, truncate to make room for the suffix itself
         if (maxLength >= stringToTruncate.length()) {
             maxLength = stringToTruncate.length();
+            return stringToTruncate.substring(0, maxLength);
         } else {
             maxLength = numChars - suffixToAdd.length();
         }
